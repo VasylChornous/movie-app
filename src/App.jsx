@@ -12,6 +12,9 @@ import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
 
 function App() {
+  const dispatch = useDispatch();
+  const { url } = useSelector((state) => state.home);
+
   useEffect(() => {
     apiTEsting();
   }, []);
@@ -19,6 +22,7 @@ function App() {
   const apiTEsting = () => {
     fetchDataFromApi("/movie/popular").then((res) => {
       console.log(res);
+      dispatch(getApiConfiguration(res));
     });
   };
 
