@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import "./App.css";
 import { fetchDataFromApi } from "./utils/api";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,6 +9,7 @@ import Details from "./pages/details/Details";
 import SearchResult from "./pages/searchResult/SearchResult";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
+import Header from "./components/header/Header";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +33,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route
           path="/"
