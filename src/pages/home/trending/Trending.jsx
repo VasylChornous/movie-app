@@ -3,6 +3,7 @@ import SwitchTabs from "../../../components/switchTabs/SwitchTabs";
 import useFetch from "../../../hooks/useFetch";
 import ContentWrapper from "../../../components/contentWrapper.jsx/ContentWrapper";
 import "./style.scss";
+import Carousel from "../../../components/carousel/Carousel";
 
 const Trending = () => {
   const [endpoint, setEndpoint] = useState("day");
@@ -22,6 +23,10 @@ const Trending = () => {
           onTabChange={onTabChange}
         />
       </ContentWrapper>
+      <Carousel
+        data={data?.results}
+        loading={loading}
+      />
     </div>
   );
 };
