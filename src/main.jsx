@@ -5,6 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import theme from "../theme.js";
+import Home from "./pages/Home.jsx";
+import Movies from "./pages/movies/Movies.jsx";
+import Shows from "./pages/shows/Shows.jsx";
+import Search from "./pages/search/Search.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,19 +17,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <div>Home</div>,
+        element: <Home />,
       },
       {
         path: "/movies",
-        element: <div>Movies</div>,
+        element: <Movies />,
       },
       {
         path: "/shows",
-        element: <div>Shows</div>,
+        element: <Shows />,
       },
       {
         path: "/search",
-        element: <div>Search</div>,
+        element: <Search />,
       },
     ],
   },
