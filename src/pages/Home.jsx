@@ -92,6 +92,7 @@ const Home = () => {
               <CardComponent
                 key={item?.id}
                 item={item}
+                type={item?.media_type}
               />
             )
           )}

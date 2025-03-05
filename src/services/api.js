@@ -13,3 +13,25 @@ export const fetchTrending = async (timeWindow = "day") => {
   );
   return data?.results;
 };
+
+// MOVIES & SERIES DETAILS
+export const fetchDetails = async (type, id) => {
+  const res = await axios.get(`${baserUrl}/${type}/${id}?api_key=${apiKey}`);
+  return res?.data;
+};
+
+// MOVIES & SERIES Credits
+export const fetchCredits = async (type, id) => {
+  const res = await axios.get(
+    `${baserUrl}/${type}/${id}/credits?api_key=${apiKey}`
+  );
+  return res?.data;
+};
+
+// MOVIES & SERIES Videos
+export const fetchVideos = async (type, id) => {
+  const res = await axios.get(
+    `${baserUrl}/${type}/${id}/videos?api_key=${apiKey}`
+  );
+  return res?.data;
+};
