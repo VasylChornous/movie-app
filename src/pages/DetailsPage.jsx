@@ -264,7 +264,13 @@ const DetailsPage = () => {
                     key={item.id}
                     minW="150px"
                   >
-                    <Image src={`${imagePath}/${item.profile_path}`} />
+                    <Image
+                      src={`${imagePath}/${item.profile_path}`}
+                      w={"100%"}
+                      height={"225px"}
+                      objectFit={"cover"}
+                      borderRadius={"sm"}
+                    />
                   </Box>
                 )
             )}

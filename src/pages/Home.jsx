@@ -28,7 +28,7 @@ const Home = () => {
         setLoading(false);
       });
   }, [timeWindow]);
-  console.log(data, "data");
+
   return (
     <Container maxW={"container.xl"}>
       <Flex
