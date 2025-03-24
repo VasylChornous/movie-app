@@ -10,7 +10,7 @@ import Movies from "./pages/movies/Movies.jsx";
 import Shows from "./pages/shows/Shows.jsx";
 import Search from "./pages/search/Search.jsx";
 import DetailsPage from "./pages/DetailsPage.jsx";
-import { AuthProvider } from "./context/authProvider.js";
+import { AuthProvider } from "./context/authProvider.jsx";
 
 const router = createBrowserRouter([
   {
