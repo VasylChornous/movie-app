@@ -1,7 +1,9 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+//import { useAuth } from "../context/useAuth";
 
 const Navbar = () => {
+  // const { user, signInwithGoogle, logout } = useAuth();
   return (
     <Box
       py="4"
