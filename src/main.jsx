@@ -11,6 +11,8 @@ import Shows from "./pages/shows/Shows.jsx";
 import Search from "./pages/search/Search.jsx";
 import DetailsPage from "./pages/DetailsPage.jsx";
 import { AuthProvider } from "./context/authProvider.jsx";
+import WatchList from "./pages/WatchList.jsx";
+import Protected from "./components/routes/Protected.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <Search />,
+      },
+      {
+        path: "/watchlist",
+        element: (
+          <Protected>
+            <WatchList />
+          </Protected>
+        ),
       },
     ],
   },
